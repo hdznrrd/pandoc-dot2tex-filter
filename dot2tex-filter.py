@@ -25,7 +25,7 @@ def dot2tex(key, value, format, meta):
         if len(err) != 0:
             raise ValueError(err)
         tikz_code = response[0].decode("utf-8")
-        result = "\\begin{figure}\n\\centering\\begin{tikzpicture}[scale=" + scale + "]" + tikz_code + "\\end{tikzpicture}\\caption{" + caption + "} \\label{" + label + "}\\end{figure}"
+        result = "\\begin{figure}[H]\n\\centering\\begin{tikzpicture}[scale=" + scale + "]" + tikz_code + "\\end{tikzpicture}\\caption{" + caption + "} \\label{" + label + "}\\end{figure}"
         return {
             "c": [
                 "latex",
